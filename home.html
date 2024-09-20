@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symbol Matching Game - Home</title>
+    <link rel="stylesheet" href="./css/homepage.css"> <!-- Link to homepage CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><!--link frome google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai+Looped:wght@100;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="homepage">
+        <h1>Welcome to the Symbol Matching Game</h1>
+        <p>มาเสริมสร้างความจำด้วยการจับคู่สัญลักษณ์ในเกมสนุกและมีสีสันกันเถอะ!!</p>
+        <button id="play-button">Play Now</button>
+    </div>
+
+    <script>
+        document.getElementById('play-button').addEventListener('click', function() {
+            window.location.href = 'game.html';  // Redirect to the game page
+        });
+    </script>
+</body>
+</html>

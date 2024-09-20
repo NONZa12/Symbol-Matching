@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symbol Matching Game</title>
+    <link rel="stylesheet" href="./css/gamepage.css"> <!-- Link to game CSS -->
+</head>
+<body>
+    <h1>Symbol Matching Game</h1>
+    <div id="game-board">
+        <!-- Cards will be generated here dynamically -->
+    </div>
+    <p id="status"></p>
+<div id="button-container">
+    <button id="quit-button">Quit Game</button> <!-- Quit button -->
+</div>
+
+    <script src="./javascript/game.js"></script>
+    <script>
+        document.getElementById('quit-button').addEventListener('click', function() {
+            window.location.href = 'home.html';  // Redirect to the homepage
+        });
+    </script>
+</body>
+</html>
