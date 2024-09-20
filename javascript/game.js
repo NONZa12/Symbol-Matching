@@ -27,7 +27,7 @@ function createGameBoard(emojis) {
         card.classList.add('card');
         card.dataset.emoji = emoji;
         card.innerHTML = '<span>' + emoji + '</span>';  // Add emoji to card
-        //card.querySelector('span').style.display = 'none';  // Hide emoji initially
+        card.querySelector('span').style.display = 'none';  // Hide emoji initially
         gameBoard.appendChild(card);
 
         card.addEventListener('click', flipCard); // Add click event to flip the card
@@ -39,7 +39,7 @@ function flipCard() {
     if (lockBoard) return; // Prevent flipping if the board is locked
     if (this === firstCard) return; // Prevent flipping the same card
 
-    //this.querySelector('span').style.display = 'block';  // Show the emoji
+    this.querySelector('span').style.display = 'block';  // Show the emoji
     this.classList.add('flipped'); // Add flipped class to show emoji
     if (!hasFlippedCard) {
         hasFlippedCard = true;
@@ -72,6 +72,8 @@ function disableCards() {
 function unflipCards() {
     lockBoard = true; // Lock the board for a brief moment
     setTimeout(() => {
+        firstCard.querySelector('span').style.display = 'none';
+        secondCard.querySelector('span').style.display = 'none';
         firstCard.classList.remove('flipped');
         secondCard.classList.remove('flipped');
         resetBoard();
