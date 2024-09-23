@@ -62,6 +62,7 @@ function disableCards() {
     matchedPairs++;
     if (matchedPairs === 8) {
         document.getElementById('status').textContent = 'You won! All pairs matched!';
+        document.getElementById('play-again-button').style.display = 'block';  // Show the Play Again button
     }
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
